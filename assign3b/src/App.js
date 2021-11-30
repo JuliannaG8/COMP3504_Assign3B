@@ -1,7 +1,8 @@
 import './App.css';
 import {useEffect, useState} from "react";
-import {Route} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import {cloneDeep} from "lodash";
+import ItemList from "./components/ItemList";
 
 function App() {
   const [items, updateItems] = useState([]);
@@ -38,9 +39,11 @@ function App() {
       <Route path="/addItem" exact>
         <AddItemForm/>
       </Route>
-      <Route path="/itemDetails">
-        <ItemDetails/>
-      </Route>
+      <Switch>
+        <Route path="/item/:id">
+          <ItemDetails/>
+        </Route>
+      </Switch>
     </div>
   );
 }
