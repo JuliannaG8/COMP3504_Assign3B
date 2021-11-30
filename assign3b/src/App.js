@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import {useEffect, useState} from "react";
+import {Route} from "react-router-dom";
 
 function App() {
+  const [items, updateItems] = useState([])
+  useEffect(()=>{
+    if (items.length === 0){
+      const url = "https://comp3504api.herokuapp.com/api/items";
+      fetch(url).then(resp=>{
+        if(resp.ok)
+          return resp.json();
+        else
+          throw new Error("Fetch Failed");
+      }).then(data=>{
+        updateItems(data);
+      })
+    }
+  })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route path="/" exact>
+        <ItemList items={items}/>
+      </Route>
+      <Route path="/addItem" exact>
+        <AddItemForm/>
+      </Route>
+      <Route path="/itemDetails">
+        <ItemDetails/>
+      </Route>
     </div>
   );
 }
