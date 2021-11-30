@@ -4,6 +4,8 @@ import {Route, Switch} from "react-router-dom";
 import {cloneDeep} from "lodash";
 import ItemList from "./components/ItemList";
 import ItemDetails from "./components/ItemDetails";
+import AddItemForm from "./components/AddItemForm";
+
 
 function App() {
   const [items, updateItems] = useState([]);
@@ -25,7 +27,7 @@ function App() {
     const reset = ()=>{updateItemsCopy(items)}
     const search = (params)=>{
       const copy = cloneDeep(items);
-      const matches = copy.filter((i)=> i.name.toLowerCase().includes(params) || i.id === params);
+      const matches = copy.filter((i)=> i.name.toLowerCase().includes(params.toLowerCase()) || i.id === params);
       if (matches.length === 0)
         alert("No items with name or id " + params);
       else
