@@ -1,5 +1,5 @@
 import {createRef, useEffect, useState} from "react";
-import {Redirect} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 
 const AddItemForm = ()=>{
     const name = createRef();
@@ -47,6 +47,7 @@ const AddItemForm = ()=>{
                     <input type="number" ref={quantity}/>
                 </div>
                 <button type="submit">Submit</button>
+                <button><Link to="/">Go Back</Link></button>
             </form>
         )
     } else return <Redirect to="/"/>
