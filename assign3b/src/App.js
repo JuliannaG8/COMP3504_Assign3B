@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {Route, Switch} from "react-router-dom";
 import {cloneDeep} from "lodash";
 import ItemList from "./components/ItemList";
+import ItemDetails from "./components/ItemDetails";
 
 function App() {
   const [items, updateItems] = useState([]);
