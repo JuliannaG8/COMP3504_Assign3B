@@ -1,10 +1,12 @@
 import {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 
+
 const ItemDetails=()=>{
     const {id} = useParams();
     const [item, setItem] = useState({});
     const [fetching, setFetch] = useState(true);
+
     useEffect(()=>{
         const url = `https://comp3504api.herokuapp.com/api/items/${id}`;
         fetch(url).then(resp=>{
