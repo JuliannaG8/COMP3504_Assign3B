@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/COMP3504_Assign3B/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/COMP3504_Assign3B/static/js/main.ea9ab647.chunk.js",
+    "main.js.map": "/COMP3504_Assign3B/static/js/main.ea9ab647.chunk.js.map",
+    "runtime-main.js": "/COMP3504_Assign3B/static/js/runtime-main.8e46619c.js",
+    "runtime-main.js.map": "/COMP3504_Assign3B/static/js/runtime-main.8e46619c.js.map",
+    "static/js/2.d4583cad.chunk.js": "/COMP3504_Assign3B/static/js/2.d4583cad.chunk.js",
+    "static/js/2.d4583cad.chunk.js.map": "/COMP3504_Assign3B/static/js/2.d4583cad.chunk.js.map",
+    "static/js/3.b0c6a1ae.chunk.js": "/COMP3504_Assign3B/static/js/3.b0c6a1ae.chunk.js",
+    "static/js/3.b0c6a1ae.chunk.js.map": "/COMP3504_Assign3B/static/js/3.b0c6a1ae.chunk.js.map",
+    "index.html": "/COMP3504_Assign3B/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/COMP3504_Assign3B/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.d4583cad.chunk.js.LICENSE.txt": "/COMP3504_Assign3B/static/js/2.d4583cad.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e46619c.js",
+    "static/js/2.d4583cad.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.ea9ab647.chunk.js"
+  ]
+}
