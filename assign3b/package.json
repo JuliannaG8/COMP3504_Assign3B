@@ -2,6 +2,7 @@
   "name": "assign3b",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://juliannag8.github.io/COMP3504_Assign3B/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
