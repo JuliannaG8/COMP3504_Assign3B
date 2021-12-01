@@ -1,4 +1,4 @@
-import {createRef, useEffect, useState} from "react";
+import {createRef} from "react";
 import {Link, Redirect} from "react-router-dom";
 
 const AddItemForm = ()=>{
@@ -6,8 +6,7 @@ const AddItemForm = ()=>{
     const id = createRef();
     const price = createRef();
     const quantity = createRef();
-    const [saved, hasSaved] = useState(false);
-    useEffect(()=>hasSaved(false));
+    let saved=false;
     const handleSubmit = e=>{
         e.preventDefault();
         if (typeof name === 'undefined')
@@ -21,7 +20,7 @@ const AddItemForm = ()=>{
         else{
             const url = `https://comp3504api.herokuapp.com/api/items/${id.current.value}/${name.current.value}/${price.current.value}/${quantity.current.value}`;
             fetch(url, {method: "POST", mode: "no-cors"}).then(()=>{
-                    hasSaved(true);
+                    saved = true;
             }).catch(e=>console.error(e))
         }
     }
